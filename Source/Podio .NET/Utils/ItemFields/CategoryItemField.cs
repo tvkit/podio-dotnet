@@ -14,7 +14,7 @@ namespace PodioAPI.Utils.ItemFields
             get { return this.ValuesAs<Option>(); }
         }
 
-        public int OptionId
+        public long OptionId
         {
             set
             {
@@ -23,7 +23,7 @@ namespace PodioAPI.Utils.ItemFields
             }
         }
 
-        public IEnumerable<int> OptionIds
+        public IEnumerable<long> OptionIds
         {
             set
             {

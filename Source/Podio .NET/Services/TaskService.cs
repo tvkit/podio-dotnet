@@ -421,7 +421,7 @@ namespace PodioAPI.Services
         /// </summary>
         /// <param name="taskId"></param>
         /// <param name="labelIds"></param>
-        public async System.Threading.Tasks.Task UpdateTaskLabels(int taskId, List<int> labelIds)
+        public async System.Threading.Tasks.Task UpdateTaskLabels(int taskId, List<long> labelIds)
         {
             string url = string.Format("/task/{0}/label/", taskId);
             dynamic requestData = labelIds;
@@ -578,7 +578,7 @@ namespace PodioAPI.Services
         ///     generated. Default value: false.
         /// </param>
         /// <returns></returns>
-        public async Task<int?> CompleteTask(int taskId, bool hook = true, bool silent = false)
+        public async Task<int?> CompleteTask(long taskId, bool hook = true, bool silent = false)
         {
             string url = string.Format("/task/{0}/complete", taskId);
             url = Utility.PrepareUrlWithOptions(url, new CreateUpdateOptions(silent, hook));

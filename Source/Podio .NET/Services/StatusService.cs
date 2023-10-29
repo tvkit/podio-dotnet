@@ -41,7 +41,7 @@ namespace PodioAPI.Services
         /// <param name="questionText">The text of the question if any</param>
         /// <param name="questionOptions">The list of answer options as strings</param>
         /// <returns></returns>
-        public async Task<Status> AddNewStatusMessage(int spaceId, string text, List<int> fileIds = null, int? embedId = null,
+        public async Task<Status> AddNewStatusMessage(int spaceId, string text, List<long> fileIds = null, int? embedId = null,
             string embedUrl = null, string questionText = null, List<string> questionOptions = null)
         {
             string url = string.Format("/status/space/{0}/", spaceId);
@@ -75,7 +75,7 @@ namespace PodioAPI.Services
         ///     area
         /// </param>
         /// <param name="embedUrl">The url to be attached</param>
-        public async Task<dynamic> UpdateStatusMessage(int statusId, string text, List<int> fileIds = null, int? embedId = null,
+        public async Task<dynamic> UpdateStatusMessage(int statusId, string text, List<long> fileIds = null, int? embedId = null,
             string embedUrl = null)
         {
             string url = string.Format("/status/{0}", statusId);

@@ -14,7 +14,7 @@ namespace PodioAPI.Models
         public string AvatarType { get; set; }
 
         [JsonProperty(PropertyName = "avatar_id")]
-        public int? AvatarId { get; set; }
+        public long? AvatarId { get; set; }
 
         [JsonProperty(PropertyName = "image")]
         public Image Image { get; set; }

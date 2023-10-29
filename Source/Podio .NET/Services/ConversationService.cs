@@ -233,7 +233,7 @@ namespace PodioAPI.Services
         /// </param>
         /// <param name="embedUrl">The url to be attached</param>
         /// <returns></returns>
-        public async Task<ConversationEvent> ReplyToConversation(int converstionId, string text, List<int> fileIds = null,
+        public async Task<ConversationEvent> ReplyToConversation(int converstionId, string text, List<long> fileIds = null,
             int? embedId = null, string embedUrl = null)
         {
             string url = string.Format("/conversation/{0}/reply/v2", converstionId);

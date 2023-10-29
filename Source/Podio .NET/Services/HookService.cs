@@ -65,7 +65,7 @@ namespace PodioAPI.Services
         ///     <para>Podio API Reference: https://developers.podio.com/doc/hooks/request-hook-verification-215232 </para>
         /// </summary>
         /// <param name="hookId"></param>
-        public async Task<dynamic> Verify(int hookId)
+        public async Task<dynamic> Verify(long hookId)
         {
             string url = string.Format("/hook/{0}/verify/request", hookId);
             return await _podio.Post<dynamic>(url);

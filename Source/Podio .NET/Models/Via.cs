@@ -5,7 +5,7 @@ namespace PodioAPI.Models
     public class Via
     {
         [JsonProperty(PropertyName = "auth_client_id")]
-        public int? AuthClientId { get; set; }
+        public long? AuthClientId { get; set; }
 
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

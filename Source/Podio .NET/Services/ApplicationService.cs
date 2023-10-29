@@ -303,9 +303,9 @@ namespace PodioAPI.Services
         /// </summary>
         /// <param name="spaceId"></param>
         /// <param name="appIds"></param>
-        public async System.Threading.Tasks.Task UpdateAppOrder(int spaceId, List<int> appIds)
+        public async System.Threading.Tasks.Task UpdateAppOrder(int spaceId, List<long> appIds)
         {
-            appIds = new List<int>();
+            appIds = new List<long>();
             string url = string.Format("/app/space/{0}/order", spaceId);
             await _podio.Put<dynamic>(url, appIds);
         }
@@ -536,7 +536,7 @@ namespace PodioAPI.Services
         /// <param name="appId"></param>
         /// <param name="fieldId"></param>
         /// <param name="config"></param>
-        public async System.Threading.Tasks.Task UpdateAnAppField(int appId, int fieldId, FieldConfig config)
+        public async System.Threading.Tasks.Task UpdateAnAppField(long appId, long fieldId, FieldConfig config)
         {
             string url = string.Format("/app/{0}/field/{1}", appId, fieldId);
             await _podio.Put<dynamic>(url, config);

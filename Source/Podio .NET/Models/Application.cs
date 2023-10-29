@@ -14,7 +14,7 @@ namespace PodioAPI.Models
         }
 
         [JsonProperty("app_id")]
-        public int AppId { get; set; }
+        public long AppId { get; set; }
 
         [JsonProperty("original")]
         public int? Original { get; private set; }
@@ -29,13 +29,13 @@ namespace PodioAPI.Models
         public string Icon { get; private set; }
 
         [JsonProperty("icon_id")]
-        public int? IconId { get; private set; }
+        public long? IconId { get; private set; }
 
         [JsonProperty("space_id")]
-        public int? SpaceId { get; set; }
+        public long? SpaceId { get; set; }
 
         [JsonProperty("owner_id")]
-        public int? OwnerId { get; private set; }
+        public long? OwnerId { get; private set; }
 
         [JsonProperty("owner")]
         public Profile Owner { get; private set; }

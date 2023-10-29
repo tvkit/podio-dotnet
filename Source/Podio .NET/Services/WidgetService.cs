@@ -95,7 +95,7 @@ namespace PodioAPI.Services
         /// <param name="refType"></param>
         /// <param name="refId"></param>
         /// <param name="widgetIds">The ids of the widgets in the new requested order.</param>
-        public async Task<dynamic> UpdateWidgetOrder(string refType, string refId, List<int> widgetIds)
+        public async Task<dynamic> UpdateWidgetOrder(string refType, string refId, List<long> widgetIds)
         {
             string url = string.Format("/widget/{0}/{1}/order", refType, refId);
             return  await _podio.Put<dynamic>(url, widgetIds);

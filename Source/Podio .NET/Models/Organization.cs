@@ -6,7 +6,7 @@ namespace PodioAPI.Models
     public class Organization
     {
         [JsonProperty("org_id")]
-        public int OrgId { get; set; }
+        public long OrgId { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -33,7 +33,7 @@ namespace PodioAPI.Models
         public string Status { get; set; }
 
         [JsonProperty("sales_agent_id")]
-        public int SalesAgentId { get; set; }
+        public long SalesAgentId { get; set; }
 
         [JsonProperty("created_on")]
         public string CreatedOn { get; set; }

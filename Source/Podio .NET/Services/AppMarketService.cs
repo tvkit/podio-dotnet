@@ -188,7 +188,7 @@ namespace PodioAPI.Services
         ///     specified, all dependencies will be installed
         /// </param>
         /// <returns></returns>
-        public async Task<AppMarketShareInstall> InstallShare(int shareId, int spaceId, List<int> dependentShareIds)
+        public async Task<AppMarketShareInstall> InstallShare(int shareId, int spaceId, List<long> dependentShareIds)
         {
             string url = string.Format("/app_store/{0}/install", shareId);
             dynamic requestData = new

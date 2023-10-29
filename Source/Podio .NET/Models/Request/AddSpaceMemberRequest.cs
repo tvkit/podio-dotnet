@@ -45,6 +45,6 @@ namespace PodioAPI.Models.Request
         ///     Must be set to the item id if source_key is set
         /// </summary>
         [JsonProperty("context_ref_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int? ContextRefId { get; set; }
+        public long? ContextRefId { get; set; }
     }
 }

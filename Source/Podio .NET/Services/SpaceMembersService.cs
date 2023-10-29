@@ -21,7 +21,7 @@ namespace PodioAPI.Services
         /// </summary>
         /// <param name="spaceId"></param>
         /// <returns></returns>
-        public async Task<List<SpaceMember>> GetActiveMembersOfSpace(int spaceId)
+        public async Task<List<SpaceMember>> GetActiveMembersOfSpace(long spaceId)
         {
             string url = string.Format("/space/{0}/member/", spaceId);
             return  await _podio.Get<List<SpaceMember>>(url);
@@ -34,7 +34,7 @@ namespace PodioAPI.Services
         /// <param name="spaceId"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task<SpaceMember> GetSpaceMember(int spaceId, int userId)
+        public async Task<SpaceMember> GetSpaceMember(long spaceId, long userId)
         {
             string url = string.Format("/space/{0}/member/{1}/v2", spaceId, userId);
             return  await _podio.Get<SpaceMember>(url);
@@ -122,7 +122,7 @@ namespace PodioAPI.Services
         /// <param name="spaceId"></param>
         /// <param name="userIds"></param>
         /// <param name="role"></param>
-        public async Task<dynamic> UpdateSpaceMemberships(int spaceId, int[] userIds, string role)
+        public async Task<dynamic> UpdateSpaceMemberships(long spaceId, long[] userIds, string role)
         {
             string userIdsCSV = Utility.ArrayToCSV(userIds);
             string url = string.Format("/space/{0}/member/{1}", spaceId, userIdsCSV);

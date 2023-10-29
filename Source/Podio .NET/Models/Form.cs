@@ -9,19 +9,19 @@ namespace PodioAPI.Models
         ///     The id of the form
         /// </summary>
         [JsonProperty("form_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int FormId { get; set; }
+        public long FormId { get; set; }
 
         /// <summary>
         ///     The id of the app the form belongs to
         /// </summary>
         [JsonProperty("app_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int AppId { get; set; }
+        public long AppId { get; set; }
 
         /// <summary>
         ///     The id of the space the form belongs to
         /// </summary>
         [JsonProperty("space_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int SpaceId { get; set; }
+        public long SpaceId { get; set; }
 
         /// <summary>
         ///     Either "active" or "disabled"
